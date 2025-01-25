@@ -1,0 +1,23 @@
+nav {
+  height: 10dvh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ecece8;
+}
+
+nav img {
+  width: 200px;
+}
+
+nav button {
+  height: 40px;
+  width: 130px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 2px solid royalblue;
+  color: royalblue;
+  font-weight: 600;
+}
