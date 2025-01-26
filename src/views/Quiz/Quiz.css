@@ -49,7 +49,7 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
-  height: 12dvh;
+  height: 12vh;
   border: 2px solid transparent;
   border-radius: 12px; /* Dumaloq burchaklar */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s,
@@ -67,7 +67,6 @@
   background-color: royalblue;
   color: white;
   border-color: royalblue;
-  transform: scale(1.05); /* Tanlanganida biroz kattalashadi */
 }
 
 /* Quiz Buttons (Next/Previous) */
@@ -99,9 +98,7 @@
 
 .quiz-btns button:hover:not(:disabled) {
   background-color: darkblue;
-  transform: scale(
-    1.05
-  ); /* Tugma bosilmagan holatda hover paytida kattalashadi */
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 1100px) {
@@ -115,5 +112,9 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     text-align: left;
+  }
+  .option-button {
+    height: auto;
+    padding: 20px 10px;
   }
 }
