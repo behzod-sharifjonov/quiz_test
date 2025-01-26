@@ -37,7 +37,7 @@ function Auth() {
             Please login/Signup to your account.
           </span>
         </div>
-        <div className="auth-form">
+        <div className="auth-form container">
           <form action="" onSubmit={sendFormHantler}>
             <div className="form-input">
               <label htmlFor="name">ismingiz</label>

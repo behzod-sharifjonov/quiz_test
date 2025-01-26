@@ -93,17 +93,25 @@ const Quiz = () => {
           </div>
         </div>
       ) : (
-        <div>
-          <h2>Test tugadi</h2>
-          <p>
-            Ballaringiz: {score} / {questions.length}
-          </p>
-          {score >= 10 ? (
-            <p>Tabriklaymiz! Siz testni topshirdingiz.</p>
-          ) : (
-            <p>Afsuski, siz testni o'ta olmadingiz.</p>
-          )}
-          <button onClick={handleReset}>Yana urinish</button>
+        <div className="finally-quiz">
+          <div className="finally-container">
+            <h2 className="animate-text">Test tugadi</h2>
+            <p className="animate-text">
+              Ballaringiz: {score} / {questions.length}
+            </p>
+            {score >= 10 ? (
+              <p className="animate-text">
+                Tabriklaymiz! Siz testni topshirdingiz.
+              </p>
+            ) : (
+              <p className="animate-text">
+                Afsuski, siz testni o'ta olmadingiz.
+              </p>
+            )}
+            <button className="animate-button" onClick={handleReset}>
+              Yana urinish
+            </button>
+          </div>
         </div>
       )}
     </div>

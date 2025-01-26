@@ -119,3 +119,13 @@
         display: none;
     }
   }
+
+  @media screen and (max-width:450px){
+    .form-input{
+        width: 100%;
+    }
+
+    .auth-form{
+        width: 100%;
+    }
+  }
