@@ -1,75 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import "./Quiz.css";
-
-// 10ta savolni o'z ichiga olgan misol
-const questions = [
-  {
-    id: 1,
-    question: "Fransiyaning poytaxti qaysi?",
-    options: ["Parij", "London", "Berlin", "Madrid"],
-    answer: "Parij",
-  },
-  {
-    id: 2,
-    question: "Qaysi sayyora Qizil Sayyora sifatida tanilgan?",
-    options: ["Yer", "Mars", "Yupiter", "Venera"],
-    answer: "Mars",
-  },
-  {
-    id: 3,
-    question: "Dunyoning eng katta okeani qaysi?",
-    options: [
-      "Atlantika okeani",
-      "Hind okeani",
-      "Tinch okeani",
-      "Arktika okeani",
-    ],
-    answer: "Tinch okeani",
-  },
-  {
-    id: 4,
-    question: "'Hamlet' asarini kim yozgan?",
-    options: ["Mark Tven", "J.K. Rouling", "Uilyam Shekspir", "Charlz Dikens"],
-    answer: "Uilyam Shekspir",
-  },
-  {
-    id: 5,
-    question: "64 ning kvadrat ildizi nechiga teng?",
-    options: ["6", "8", "10", "12"],
-    answer: "8",
-  },
-  {
-    id: 6,
-    question: "Dunyoning eng baland tog'i qaysi?",
-    options: ["Everest", "K2", "Kilimanjarro", "Makalu"],
-    answer: "Everest",
-  },
-  {
-    id: 7,
-    question: "Qaysi elementning kimyoviy belgisi 'O'?",
-    options: ["Oksijen", "Vodorod", "Azot", "Karbongaz"],
-    answer: "Oksijen",
-  },
-  {
-    id: 8,
-    question: "Qaysi yulduz eng yaqin yulduz?",
-    options: ["Yupiter", "Sirius", "Proxima Sentauri", "Alfa Sentauri"],
-    answer: "Proxima Sentauri",
-  },
-  {
-    id: 9,
-    question: "Qaysi o‘simlik eng katta gulga ega?",
-    options: ["Kardamon", "Nargis", "Titan arum", "Lotus"],
-    answer: "Titan arum",
-  },
-  {
-    id: 10,
-    question: "Qaysi davlatda eng ko'p rasmiy tillar mavjud?",
-    options: ["Shveytsariya", "Hindiston", "Kanada", "Belgiya"],
-    answer: "Shveytsariya",
-  },
-];
+import { questions } from "../../quiz_data";
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -80,8 +12,8 @@ const Quiz = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
-  const handleChange = (event) => {
-    setSelectedOption(event.target.value);
+  const handleSelectOption = (option) => {
+    setSelectedOption(option); // Foydalanuvchi variantni tanlaganda tanlangan variantni saqlash
   };
 
   const handleNext = () => {
@@ -97,7 +29,7 @@ const Quiz = () => {
 
       if (currentQuestionIndex < questions.length - 1) {
         setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-        setSelectedOption("");
+        setSelectedOption(""); // Keyingi savolga o'tganda tanlangan variantni tozalash
       } else {
         setIsQuizCompleted(true);
       }
@@ -107,7 +39,7 @@ const Quiz = () => {
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
-      setSelectedOption("");
+      setSelectedOption(""); // Oldingi savolga o'tganda ham tanlangan variantni tozalash
     }
   };
 
@@ -127,28 +59,27 @@ const Quiz = () => {
 
       {!isQuizCompleted ? (
         <div>
-          <div className="quiz-title">
+          <div className="quiz-title container">
             <h2>{currentQuestion.question}</h2>
           </div>
-          <div className="quiz-container">
+          <div className="quiz-container container">
             <ul className="quiz-list">
               {currentQuestion.options.map((option, index) => (
                 <li key={index}>
-                  <label>
-                    <input
-                      type="radio"
-                      value={option}
-                      checked={selectedOption === option}
-                      onChange={handleChange}
-                    />
+                  <button
+                    className={`option-button ${
+                      selectedOption === option ? "active" : ""
+                    }`}
+                    onClick={() => handleSelectOption(option)}
+                  >
                     {option}
-                  </label>
+                  </button>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
+          <div className="quiz-btns container">
             <button
               onClick={handlePrevious}
               disabled={currentQuestionIndex === 0}
