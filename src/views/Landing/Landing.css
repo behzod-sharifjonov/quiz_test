@@ -50,3 +50,16 @@ header {
   font-size: 18px;
   font-weight: 600;
 }
+
+@media screen and (max-width:767px){
+    .header-text{
+        text-align: center;
+        width: 100%;
+    }
+    .header-container {
+        flex-direction: column;
+    }
+    .header-image{
+        width: 100%;
+    }
+} 

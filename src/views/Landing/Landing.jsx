@@ -20,7 +20,9 @@ function Landing() {
             </b>
             'dan boshlanadi
           </h2>
+          <div>
           <span>We help you prepare for exams and quizes </span>
+          </div>
           <div className="quiz-btn">
             <button onClick={() => navigate("/login")}>Quiz'ni boshlash</button>
           </div>
