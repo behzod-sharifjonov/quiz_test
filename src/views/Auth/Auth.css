@@ -104,3 +104,18 @@
 .auth-image img {
   width: 60%;
 }
+
+@media screen and (max-width: 1100px) {
+    .auth-image{
+        display: none;
+    }
+    .auth-text{
+        width: 100%;
+    }
+   
+  }
+  @media screen and (max-width: 700px) {
+    .auth-image{
+        display: none;
+    }
+  }
