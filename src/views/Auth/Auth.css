@@ -97,35 +97,40 @@
   cursor: pointer;
 }
 
-.auth-image{
-    background-color: #F3F3F3;
+.auth-image {
+  background-color: #f3f3f3;
 }
 
 .auth-image img {
   width: 60%;
 }
 
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 @media screen and (max-width: 1100px) {
-    .auth-image{
-        display: none;
-    }
-    .auth-text{
-        width: 100%;
-    }
-   
+  .auth-image {
+    display: none;
   }
-  @media screen and (max-width: 700px) {
-    .auth-image{
-        display: none;
-    }
+  .auth-text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .auth-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-input {
+    width: 100%;
   }
 
-  @media screen and (max-width:450px){
-    .form-input{
-        width: 100%;
-    }
-
-    .auth-form{
-        width: 100%;
-    }
+  .auth-form {
+    width: 100%;
   }
+}

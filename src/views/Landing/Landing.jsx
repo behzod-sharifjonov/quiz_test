@@ -21,10 +21,10 @@ function Landing() {
             'dan boshlanadi
           </h2>
           <div>
-          <span>We help you prepare for exams and quizes </span>
+          <span>Test orqali siz o'zliginizni toping</span>
           </div>
           <div className="quiz-btn">
-            <button onClick={() => navigate("/login")}>Quiz'ni boshlash</button>
+            <button onClick={() => navigate("/login")}>Test'ni boshlash</button>
           </div>
         </div>
         <div className="header-image">
