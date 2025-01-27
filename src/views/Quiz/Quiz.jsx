@@ -67,7 +67,7 @@ const Quiz = () => {
             <h2>{currentQuestion.question}</h2>
             {/* Umumiy savollar soni va javob berilgan savollar soni */}
             <p className="all-quetions">
-            {answeredQuestionsCount} / {totalQuestionsCount}
+              {answeredQuestionsCount} / {totalQuestionsCount}
             </p>
           </div>
           <div className="quiz-container container">
