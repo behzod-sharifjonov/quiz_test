@@ -15,11 +15,7 @@ function Navbar() {
     <nav>
       <img onClick={() => navigate("/")} className="logo" src={logo} alt="" />
       <button
-        className={`${
-          location.pathname == "/"
-            ? "none"
-            : "flex"
-        }`}
+        className={`${location.pathname == "/" ? "none" : "flex"}`}
         onClick={() => (navigate("/"), setLogin(false))}
       >
         Chiqish

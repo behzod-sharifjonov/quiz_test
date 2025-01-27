@@ -1,19 +1,28 @@
 /* Quiz Title */
 .quiz-title {
-  height: 40vh;
+  height: 30vh;
   background-color: royalblue;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 10%;
+  position: relative;
 }
 
 .quiz-title h2 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.1rem, 3vw, 2rem);
   font-weight: 600;
   color: white;
   text-align: center;
+}
+
+.all-quetions{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+
 }
 
 /* Quiz Container */
@@ -49,7 +58,7 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
-  height: 12vh;
+  height: 15vh;
   border: 2px solid transparent;
   border-radius: 12px; /* Dumaloq burchaklar */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s,
@@ -211,7 +220,7 @@
   }
   .option-button {
     height: auto;
-    padding: 20px 10px;
+    padding: 14px 10px;
   }
   .animate-button {
     padding: 10px 50px;

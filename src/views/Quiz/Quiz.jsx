@@ -12,6 +12,10 @@ const Quiz = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  // Javob berilgan savollar soni
+  const answeredQuestionsCount = Object.keys(answers).length;
+  const totalQuestionsCount = questions.length; // Umumiy savollar soni
+
   const handleSelectOption = (option) => {
     setSelectedOption(option); // Foydalanuvchi variantni tanlaganda tanlangan variantni saqlash
   };
@@ -61,6 +65,10 @@ const Quiz = () => {
         <div>
           <div className="quiz-title container">
             <h2>{currentQuestion.question}</h2>
+            {/* Umumiy savollar soni va javob berilgan savollar soni */}
+            <p className="all-quetions">
+            {answeredQuestionsCount} / {totalQuestionsCount}
+            </p>
           </div>
           <div className="quiz-container container">
             <ul className="quiz-list">
