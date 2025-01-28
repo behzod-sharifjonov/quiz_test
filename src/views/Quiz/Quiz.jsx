@@ -107,7 +107,7 @@ const Quiz = () => {
             <p className="animate-text">
               Ballaringiz: {score} / {questions.length}
             </p>
-            {score >= 10 ? (
+            {score >= 5 ? (
               <p className="animate-text">
                 Tabriklaymiz! Siz testni topshirdingiz.
               </p>
